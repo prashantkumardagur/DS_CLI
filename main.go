@@ -13,6 +13,7 @@ func main() {
 	cli := NewCLI()
 	cli.Run()
 	// cli.Seed(seed1)
+	// cli.Seed(seed2)
 	
 }
 
@@ -87,7 +88,9 @@ func main() {
 // ================================================================================================================================
 
 
-// Seed data for testing
+// Seed data for testing ----------------------------------------
+
+// Seed data for basic operations
 var seed1 = []string{
 	"var int a",
 	"var int b",
@@ -102,6 +105,37 @@ var seed1 = []string{
 // 10
 // 20
 // 30
+
+
+// Seed data for stack operations
+var seed2 = []string{
+	"var stack int a",
+	"push a 10",
+	"push a 20",
+	"push a 30",
+	"print a",
+	"var int b",
+	"pop a b",
+	"print b",
+	"top a b",
+	"print b",
+	"print a",
+	"var bool c",
+	"isEmpty a c",
+	"print c",
+	"pop a b",
+	"pop a b",
+	"isEmpty a c",
+	"print c",
+}
+// Expected output
+// Stack: Top <- 30 <- 20 <- 10 <- Bottom
+// 30
+// 20
+// Stack: Top <- 20 <- 10 <- Bottom
+// false
+// true
+
 
 
 
